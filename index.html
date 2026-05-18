@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarek Mahmud Jihad | Penetration Tester & Bug Hunter</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo">TMJ<span>.sec</span></div>
+  <button id="menu-btn" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Stats</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Hello, World!</div>
+      <h1 class="name">Tarek Mahmud<br>Jihad</h1>
+      <div class="hero-title">
+        <span class="typewriter" id="typewriter"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-bio">
+        Passionate Penetration Tester and Bug Hunter focused on securing modern web applications, uncovering real-world vulnerabilities, and contributing to a safer digital ecosystem.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">⚡ View Projects</a>
+        <a href="#contact" class="btn-outline">📩 Contact Me</a>
+        <a href="#" class="btn-outline" onclick="alert('Resume download coming soon!')">⬇ Resume</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Tarekmahmudjihad" target="_blank" class="social-icon" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tarek-mahmud-jihad/" target="_blank" class="social-icon" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+        </a>
+        <a href="mailto:tarekmahmud8bp@gmail.com" class="social-icon" title="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/tarekmahmud.jihad.7" target="_blank" class="social-icon" title="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-img-frame" style="animation:float 6s ease-in-out infinite;">
+        <img src="img2.png" alt="Tarek Mahmud Jihad" id="profile-img">
+        <div class="status-badge">
+          <div class="dot-green"></div>
+          Available for Work
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">about</div>
+    <h2 class="section-title">Who I <span>Am</span></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Hi, I'm <strong>Tarek Mahmud Jihad</strong> — a passionate Penetration Tester and Bug Hunter from Noakhali, Bangladesh. I specialize in uncovering vulnerabilities in web applications before malicious actors can exploit them.</p>
+        <p>My journey into cybersecurity started with curiosity about how systems could be broken and, more importantly, how they could be fixed. Since then, I've been deeply involved in ethical hacking, bug bounty platforms, and security research.</p>
+        <p>I believe in continuous learning and staying ahead of emerging threats. Whether it's OWASP Top 10, subdomain enumeration, or building recon automation tools — I'm always expanding my skill set to deliver better security outcomes.</p>
+        <div class="focus-grid" style="margin-top:24px;">
+          <div class="focus-item">Web App Security</div>
+          <div class="focus-item">Bug Bounty Hunting</div>
+          <div class="focus-item">Reconnaissance</div>
+          <div class="focus-item">Vulnerability Assessment</div>
+          <div class="focus-item">Linux & Networking</div>
+          <div class="focus-item">Security Research</div>
+        </div>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:20px;">
+        <div class="about-stats">
+          <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">Bugs Found</div></div>
+          <div class="stat-card"><div class="stat-num">15+</div><div class="stat-label">CTF Challenges</div></div>
+          <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Projects Built</div></div>
+          <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Certifications</div></div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <div class="tb r"></div><div class="tb y"></div><div class="tb g"></div>
+          </div>
+          <div class="terminal-body">
+            <div><span class="t-green">~</span> <span class="t-cyan">whoami</span></div>
+            <div class="t-white">tarek@sec:~$ Penetration Tester</div>
+            <div><span class="t-green">~</span> <span class="t-cyan">cat location.txt</span></div>
+            <div class="t-white">Noakhali, Bangladesh 🇧🇩</div>
+            <div><span class="t-green">~</span> <span class="t-cyan">cat contact.txt</span></div>
+            <div class="t-white">tarekmahmud8bp@gmail.com</div>
+            <div><span class="t-green">~</span> <span class="t-cyan">echo $STATUS</span></div>
+            <div class="t-green">Open to opportunities ✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">skills</div>
+    <h2 class="section-title">Technical <span>Arsenal</span></h2>
+    <div class="skills-grid" id="skills-grid">
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🔴</span> Penetration Testing</div><div class="skill-bar"><div class="skill-fill" style="--w:0.9"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🕷️</span> OWASP Top 10</div><div class="skill-bar"><div class="skill-fill" style="--w:0.92"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🔫</span> Burp Suite</div><div class="skill-bar"><div class="skill-fill" style="--w:0.88"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🔎</span> Nmap</div><div class="skill-bar"><div class="skill-fill" style="--w:0.85"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🐧</span> Linux</div><div class="skill-bar"><div class="skill-fill" style="--w:0.9"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">💉</span> SQL Injection</div><div class="skill-bar"><div class="skill-fill" style="--w:0.87"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">⚡</span> XSS Testing</div><div class="skill-bar"><div class="skill-fill" style="--w:0.85"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🌐</span> Subdomain Enum</div><div class="skill-bar"><div class="skill-fill" style="--w:0.82"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🤖</span> Recon Automation</div><div class="skill-bar"><div class="skill-fill" style="--w:0.8"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🕵️</span> OSINT</div><div class="skill-bar"><div class="skill-fill" style="--w:0.83"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🐍</span> Python</div><div class="skill-bar"><div class="skill-fill" style="--w:0.78"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">💻</span> Bash Scripting</div><div class="skill-bar"><div class="skill-fill" style="--w:0.82"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🟨</span> JavaScript</div><div class="skill-bar"><div class="skill-fill" style="--w:0.7"></div></div></div>
+      <div class="skill-card"><div class="skill-name"><span class="skill-icon">🐙</span> Git & GitHub</div><div class="skill-bar"><div class="skill-fill" style="--w:0.85"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">projects</div>
+    <h2 class="section-title">Featured <span>Work</span></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">🔍</div><div><div class="project-title">Vulnerability Scanner</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">A comprehensive web vulnerability scanner that detects common security issues including XSS, SQLi, open redirects, and misconfigured headers automatically.</p>
+          <div class="project-stack"><span class="tag">Python</span><span class="tag">Requests</span><span class="tag">BeautifulSoup</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">🚪</div><div><div class="project-title">Port Scanner</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">A multi-threaded port scanner with service detection, banner grabbing, and OS fingerprinting capabilities built for fast network reconnaissance.</p>
+          <div class="project-stack"><span class="tag">Python</span><span class="tag">Socket</span><span class="tag">Threading</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">🤖</div><div><div class="project-title">Recon Automation Tool</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">Automated reconnaissance pipeline integrating subdomain enumeration, DNS resolution, port scanning, and screenshots for efficient bug bounty recon.</p>
+          <div class="project-stack"><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Subfinder</span><span class="tag">Httpx</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">⚡</div><div><div class="project-title">XSS Testing Lab</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">A local testing environment with various XSS vulnerability scenarios — reflected, stored, DOM-based — designed for safe practice and payload development.</p>
+          <div class="project-stack"><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">HTML</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">🔒</div><div><div class="project-title">Secure Login System</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">A production-ready authentication system implementing bcrypt hashing, CSRF protection, rate limiting, 2FA, and secure session management.</p>
+          <div class="project-stack"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CSRF</span><span class="tag">2FA</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-header"><div class="project-icon">📝</div><div><div class="project-title">Cybersecurity Blog</div></div></div>
+        <div class="project-body">
+          <p class="project-desc">A personal cybersecurity blog platform with write-ups, tutorials, and CTF solutions — built with a focus on clean UI and fast performance.</p>
+          <div class="project-stack"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Tarekmahmudjihad" class="link-btn primary" target="_blank">⬡ GitHub</a>
+            <a href="#" class="link-btn">↗ Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">achievements</div>
+    <h2 class="section-title">Stats &amp; <span>Milestones</span></h2>
+    <div class="achievements-grid">
+      <div class="ach-card reveal"><div class="ach-icon">🏆</div><div class="ach-num">50+</div><div class="ach-label">Bugs Reported</div></div>
+      <div class="ach-card reveal"><div class="ach-icon">🎯</div><div class="ach-num">15+</div><div class="ach-label">CTF Challenges</div></div>
+      <div class="ach-card reveal"><div class="ach-icon">🔴</div><div class="ach-num">200+</div><div class="ach-label">THM Points</div></div>
+      <div class="ach-card reveal"><div class="ach-icon">💻</div><div class="ach-num">10+</div><div class="ach-label">HTB Machines</div></div>
+      <div class="ach-card reveal"><div class="ach-icon">📄</div><div class="ach-num">5+</div><div class="ach-label">Write-ups Published</div></div>
+      <div class="ach-card reveal"><div class="ach-icon">🛡️</div><div class="ach-num">3+</div><div class="ach-label">Responsible Disclosures</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">certifications</div>
+    <h2 class="section-title">Credentials &amp; <span>Badges</span></h2>
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-platform">TryHackMe</div>
+        <div class="cert-name">Jr Penetration Tester Path</div>
+        <div class="cert-year">2024</div>
+        <a href="https://tryhackme.com" target="_blank" class="cert-verify">✓ Verify Certificate</a>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-platform">Hack The Box</div>
+        <div class="cert-name">HTB Starting Point Completion</div>
+        <div class="cert-year">2024</div>
+        <a href="https://hackthebox.com" target="_blank" class="cert-verify">✓ Verify Certificate</a>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-platform">Google</div>
+        <div class="cert-name">Google Cybersecurity Professional Certificate</div>
+        <div class="cert-year">2024</div>
+        <a href="https://grow.google/certificates/cybersecurity/" target="_blank" class="cert-verify">✓ Verify Certificate</a>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-platform">Cisco Networking Academy</div>
+        <div class="cert-name">Introduction to Cybersecurity</div>
+        <div class="cert-year">2023</div>
+        <a href="https://www.netacad.com" target="_blank" class="cert-verify">✓ Verify Certificate</a>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-platform">eLearnSecurity</div>
+        <div class="cert-name">eJPT — Junior Penetration Tester</div>
+        <div class="cert-year">2024</div>
+        <a href="https://elearnsecurity.com" target="_blank" class="cert-verify">✓ Verify Certificate</a>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-platform">EC-Council</div>
+        <div class="cert-name">Certified Ethical Hacker (CEH)</div>
+        <div class="cert-year">In Progress</div>
+        <a href="https://www.eccouncil.org" target="_blank" class="cert-verify">→ In Progress</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">education</div>
+    <h2 class="section-title">Academic <span>Background</span></h2>
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <div class="edu-dot">🎓</div>
+        <div class="edu-content">
+          <div class="edu-degree">Bachelor of Arts </div>
+          <div class="edu-school">National University</div>
+          <div class="edu-dept">Department of Political Science (BSS)</div>
+          <div class="edu-year">2022 – Present</div>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-dot">📚</div>
+        <div class="edu-content">
+          <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-school">Arts Group</div>
+          <div class="edu-dept">Noakhali, Bangladesh</div>
+          <div class="edu-year">Completed 2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">services</div>
+    <h2 class="section-title">What I <span>Offer</span></h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🌐</div>
+        <div class="service-title">Web Application Testing</div>
+        <div class="service-desc">Thorough security assessment of web applications using manual and automated techniques aligned with OWASP standards.</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔍</div>
+        <div class="service-title">Vulnerability Assessment</div>
+        <div class="service-desc">Systematic scanning and analysis of systems to identify, classify, and prioritize security vulnerabilities.</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔬</div>
+        <div class="service-title">Security Research</div>
+        <div class="service-desc">In-depth research into emerging threats, CVEs, and attack techniques to stay ahead of the threat landscape.</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🕵️</div>
+        <div class="service-title">Recon &amp; OSINT</div>
+        <div class="service-desc">Comprehensive reconnaissance and open-source intelligence gathering for thorough attack surface analysis.</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🛡️</div>
+        <div class="service-title">Security Consulting</div>
+        <div class="service-desc">Basic security consulting services including risk analysis, security best practices, and remediation guidance.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div style="max-width:1100px;margin:auto;">
+    <div class="section-label">writeups &amp; blog</div>
+    <h2 class="section-title">Latest <span>Articles</span></h2>
+    <div class="blog-grid">
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">XSS</div>
+          <div class="blog-title">Complete Guide to Cross-Site Scripting (XSS)</div>
+        </div>
+        <div class="blog-excerpt">A comprehensive walkthrough of XSS vulnerabilities — reflected, stored, and DOM-based — with real-world payloads and bypass techniques.</div>
+        <div class="blog-meta"><span class="blog-date">2024-11-15</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">SQLi</div>
+          <div class="blog-title">SQL Injection Basics to Advanced</div>
+        </div>
+        <div class="blog-excerpt">Breaking down SQL injection from fundamentals through union-based, blind, and time-based techniques with hands-on examples.</div>
+        <div class="blog-meta"><span class="blog-date">2024-10-28</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">Recon</div>
+          <div class="blog-title">My Recon Methodology for Bug Bounty</div>
+        </div>
+        <div class="blog-excerpt">A step-by-step breakdown of my reconnaissance methodology — from subdomain discovery to endpoint mapping and vulnerability hunting.</div>
+        <div class="blog-meta"><span class="blog-date">2024-10-10</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">Linux</div>
+          <div class="blog-title">Essential Linux Tips for Hackers</div>
+        </div>
+        <div class="blog-excerpt">Must-know Linux commands, shortcuts, and tools that every penetration tester and bug hunter should have in their toolkit.</div>
+        <div class="blog-meta"><span class="blog-date">2024-09-20</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">Burp Suite</div>
+          <div class="blog-title">Mastering Burp Suite for Web Testing</div>
+        </div>
+        <div class="blog-excerpt">A practical guide to using Burp Suite Pro effectively — from intercepting requests to automating attacks with Intruder and Extensions.</div>
+        <div class="blog-meta"><span class="blog-date">2024-09-05</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+      <div class="blog-card reveal">
+        <div class="blog-header">
+          <div class="blog-category">OWASP</div>
+          <div class="blog-title">OWASP Top 10 Explained (2024)</div>
+        </div>
+        <div class="blog-excerpt">A deep dive into the latest OWASP Top 10 vulnerabilities with real-world examples, impact analysis, and mitigation strategies.</div>
+        <div class="blog-meta"><span class="blog-date">2024-08-18</span><a href="#" class="read-more">Read →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:1000px;margin:auto;">
+    <div class="section-label">contact</div>
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="contact-grid">
+      <div class="contact-form reveal">
+        <div class="form-group">
+          <label>NAME</label>
+          <input type="text" placeholder="Your name" id="c-name">
+        </div>
+        <div class="form-group">
+          <label>EMAIL</label>
+          <input type="email" placeholder="your@email.com" id="c-email">
+        </div>
+        <div class="form-group">
+          <label>SUBJECT</label>
+          <input type="text" placeholder="What's this about?" id="c-subject">
+        </div>
+        <div class="form-group">
+          <label>MESSAGE</label>
+          <textarea placeholder="Your message..." id="c-message"></textarea>
+        </div>
+        <button class="btn-submit" onclick="handleContact()">Send Message ✓</button>
+        <div id="form-msg" style="display:none;color:var(--green);font-family:'JetBrains Mono',monospace;font-size:0.82rem;margin-top:8px;"></div>
+      </div>
+      <div class="contact-info reveal">
+        <a href="mailto:tarekmahmud8bp@gmail.com" class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div><div class="contact-item-label">EMAIL</div><div class="contact-item-val">tarekmahmud8bp@gmail.com</div></div>
+        </a>
+        <a href="tel:01708507400" class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div><div class="contact-item-label">PHONE</div><div class="contact-item-val">+880 1708-507400</div></div>
+        </a>
+        <a class="contact-item" href="#">
+          <div class="contact-item-icon">📍</div>
+          <div><div class="contact-item-label">LOCATION</div><div class="contact-item-val">Noakhali, Bangladesh</div></div>
+        </a>
+        <a href="https://github.com/Tarekmahmudjihad" target="_blank" class="contact-item">
+          <div class="contact-item-icon">⬡</div>
+          <div><div class="contact-item-label">GITHUB</div><div class="contact-item-val">@Tarekmahmudjihad</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/tarek-mahmud-jihad/" target="_blank" class="contact-item">
+          <div class="contact-item-icon">💼</div>
+          <div><div class="contact-item-label">LINKEDIN</div><div class="contact-item-val">/tarek-mahmud-jihad</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2025 <span>Tarek Mahmud Jihad</span> — Built with ❤️ &amp; security in mind</div>
+  <div class="footer-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<div id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<script src="script.js"></script>
+</body>
+</html>
