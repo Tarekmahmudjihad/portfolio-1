@@ -1,3 +1,4 @@
+emailjs.init('yl0Xo4B67jfn3NxJt');
 const phrases = ['Penetration Tester', 'Bug Hunter', 'Security Researcher', 'CTF Player', 'Ethical Hacker'];
 let pi=0, ci=0, del=false;
 const tw = document.getElementById('typewriter');
@@ -54,13 +55,41 @@ document.querySelectorAll('.skill-card').forEach(c => skillObserver.observe(c));
 
 // Contact form
 function handleContact() {
-  const n=document.getElementById('c-name').value;
-  const em=document.getElementById('c-email').value;
-  const msg=document.getElementById('form-msg');
-  if(!n||!em){ msg.textContent='> Please fill in required fields.'; msg.style.color='#ff4444'; msg.style.display='block'; return; }
-  msg.textContent='> Message sent successfully! I\'ll reply soon.';
-  msg.style.color='var(--green)'; msg.style.display='block';
-  ['c-name','c-email','c-subject','c-message'].forEach(id => document.getElementById(id).value='');
+  const n   = document.getElementById('c-name').value.trim();
+  const em  = document.getElementById('c-email').value.trim();
+  const sub = document.getElementById('c-subject').value.trim();
+  const txt = document.getElementById('c-message').value.trim();
+  const msg = document.getElementById('form-msg');
+
+  if (!n || !em) {
+    msg.textContent = '> Please fill in required fields.';
+    msg.style.color = '#ff4444';
+    msg.style.display = 'block';
+    return;
+  }
+
+  msg.textContent = '> Sending message...';
+  msg.style.color = 'var(--green)';
+  msg.style.display = 'block';
+
+  emailjs.send('service_ip6mava', 'template_bfkawkb', {
+    from_name:  n,
+    from_email: em,
+    subject:    sub || 'No Subject',
+    message:    txt || '(No message body)'
+  })
+  .then(() => {
+    msg.textContent = '> Message sent successfully! I\'ll reply soon.';
+    msg.style.color = 'var(--green)';
+    ['c-name', 'c-email', 'c-subject', 'c-message'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+  })
+  .catch((err) => {
+    console.error('EmailJS error:', err);
+    msg.textContent = '> Failed to send message. Please try again.';
+    msg.style.color = '#ff4444';
+  });
 }
 
 // Mobile menu
